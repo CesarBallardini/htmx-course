@@ -1,0 +1,65 @@
+# Teamwork — HTMX Course with Gleam Backend
+
+> A 28-chapter course teaching HTMX through building a collaborative task board called "Teamwork", using Gleam as the backend language.
+
+This repository contains educational content (markdown files with embedded code), not a runnable application. Each chapter builds incrementally on the previous one.
+
+## Tech Stack
+
+- Backend: Gleam (functional language on the BEAM VM)
+- Web framework: Wisp (>= 2.0.0)
+- HTTP server: Mist (>= 5.0.0)
+- HTML generation: Lustre (>= 5.0.0), a type-safe HTML DSL
+- HTMX bindings: hx library (>= 3.0.0), typed HTMX attributes for Lustre
+- Interactivity: HTMX 2.0.8, _hyperscript
+- Database: SQLite via sqlight
+- Concurrency: BEAM VM / OTP actors
+- Testing: gleeunit, wisp/simulate
+
+## Course Structure
+
+- 01-beginner/ (Chapters 1–6): HTTP fundamentals, serving HTML with Mist/Wisp, Lustre templates, first HTMX interactions, server-side state with BEAM actors
+- 02-intermediate/ (Chapters 7–12): Forms and validation, swap strategies and targets, list filtering and search, multi-page navigation, cookies/sessions/auth
+- 03-advanced/ (Chapters 13–18): Server-Sent Events, security hardening, testing strategies, HTMX extensions, deployment with Docker, third-party JS integration
+- 04-real-world-patterns/ (Chapters 19–28): Error handling, HTMX response headers, inline editing, modal dialogs, _hyperscript patterns, dynamic forms, file uploads, accessibility, database performance, background jobs with BEAM processes
+- 05-appendices/: bibliography and resources (A1), _hyperscript language reference (A2), installing mise (A3)
+
+## Chapter Format
+
+Each chapter follows: learning objectives → theory → code walkthrough → full code listing → exercises → solution hints → key takeaways → what's next.
+
+## Code Patterns
+
+Gleam routing (Wisp):
+```gleam
+case wisp.path_segments(req) {
+  [] -> handle_home(req, ctx)
+  ["tasks"] -> handle_tasks(req, ctx)
+  ["tasks", id] -> handle_task(req, ctx, id)
+  _ -> wisp.not_found()
+}
+```
+
+Type-safe HTML (Lustre + hx):
+```gleam
+html.button([hx.post("/tasks"), hx.target(hx.Selector("#task-list")), hx.swap(hx.InnerHTML)], [
+  html.text("Add Task")
+])
+```
+
+Rendering: `element.to_document_string()` for full pages, `element.to_string()` for HTMX partial responses.
+
+## Documentation
+
+- HTMX: https://htmx.org
+- Gleam: https://gleam.run
+- Wisp: https://hexdocs.pm/wisp/
+- Mist: https://hexdocs.pm/mist/
+- Lustre: https://hexdocs.pm/lustre/
+- hx: https://hexdocs.pm/hx/
+- _hyperscript: https://hyperscript.org
+
+## Optional
+
+- CLAUDE.md: Instructions for Claude Code
+- AGENTS.md: Instructions for AI coding agents
