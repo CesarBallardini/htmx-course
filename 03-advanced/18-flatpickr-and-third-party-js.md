@@ -2,7 +2,7 @@
 
 **Phase:** Advanced (bonus chapter)
 **Project:** "Teamwork" -- a collaborative task board
-**Previous:** Chapter 17 deployed the application. This chapter adds due dates
+**Previous:** [Chapter 17](17-deployment-and-production.md) deployed the application. This chapter adds due dates
 using Flatpickr, demonstrating the general pattern for integrating third-party
 JavaScript libraries with HTMX.
 
@@ -1793,14 +1793,14 @@ You now have a general pattern for integrating any third-party JavaScript librar
 
 This pattern works for date pickers, drag-and-drop libraries, rich text editors, charting libraries, mapping libraries, and anything else that attaches to DOM elements.
 
-The next section -- **Real-World Patterns (Chapters 19-28)** -- builds on
+The next section -- **Real-World Patterns ([Chapters 19-28](../04-real-world-patterns/19-error-handling-and-graceful-degradation.md))** -- builds on
 everything you have learned so far. It covers error handling, response headers,
 inline editing, modal dialogs, `_hyperscript` recipes, dynamic forms, file
 uploads, accessibility, database performance, and background jobs. These are the
 patterns you will reach for daily in production applications.
 
-Continue to **Chapter 19 -- Error Handling and Graceful Degradation** to begin
+Continue to **[Chapter 19](../04-real-world-patterns/19-error-handling-and-graceful-degradation.md) -- Error Handling and Graceful Degradation** to begin
 the Real-World Patterns section.
 
-For more on `_hyperscript`, see **Appendix B**. For documentation links to all
-tools used in this course, see **Appendix A**.
+For more on `_hyperscript`, see **[Appendix B](../05-appendices/A2-hyperscript.md)**. For documentation links to all
+tools used in this course, see **[Appendix A](../05-appendices/A1-bibliography-and-resources.md)**.

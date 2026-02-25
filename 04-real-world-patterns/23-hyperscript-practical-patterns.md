@@ -2,7 +2,7 @@
 
 **Phase:** Real-World Patterns
 **Project:** "Teamwork" -- a collaborative task board
-**Previous:** Chapter 22 introduced modal dialogs with HTMX and \_hyperscript for
+**Previous:** [Chapter 22](22-modal-dialogs.md) introduced modal dialogs with HTMX and \_hyperscript for
 open/close behaviour. This chapter collects production-ready \_hyperscript recipes
 that you will reach for again and again.
 
@@ -2619,7 +2619,7 @@ html.script(
 
 ## What's Next
 
-In **Chapter 24 -- Dynamic and Dependent Forms**, we will build forms where one
+In **[Chapter 24 -- Dynamic and Dependent Forms](24-dynamic-and-dependent-forms.md)**, we will build forms where one
 field's value determines the options in another. Think cascading dropdowns: selecting
 a project loads its task categories, selecting a category loads its priority levels.
 This pattern uses `hx-trigger="change"` and `hx-include` to send partial form

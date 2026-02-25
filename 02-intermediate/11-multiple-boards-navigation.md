@@ -2385,7 +2385,7 @@ each module has a clear, focused responsibility.
 
 ## What's Next
 
-In Chapter 12, we will add **cookies, sessions, and authentication**. We will
+In [Chapter 12](12-cookies-sessions-auth.md), we will add **cookies, sessions, and authentication**. We will
 use signed cookies to store session data, build a login form, protect routes
 with authentication middleware, and display different UI based on whether the
 user is logged in. The Teamwork app gets its first layer of access control.

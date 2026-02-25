@@ -1405,7 +1405,7 @@ The application you have built is a solid foundation. Here are features you coul
 
 - **Drag-and-drop task ordering.** Use the Sortable.js library with HTMX events to reorder tasks by dragging. Send the new order to the server with an `hx-post` on the `sortupdate` event.
 - **Labels and tags.** Add a `tags` table with a many-to-many relationship to tasks. Let users create, assign, and filter by tags.
-- **Due dates.** Add a `due_date` column to the tasks table. Show overdue tasks in red. Add a date picker to the task creation form. (This is covered in Chapter 18 with Flatpickr.)
+- **Due dates.** Add a `due_date` column to the tasks table. Show overdue tasks in red. Add a date picker to the task creation form. (This is covered in [Chapter 18](18-flatpickr-and-third-party-js.md) with Flatpickr.)
 - **File attachments.** Handle multipart file uploads with Wisp. Store files on disk or in S3. Show thumbnails for images.
 - **WebSocket-powered real-time collaboration.** Mist supports WebSockets natively. When one user adds a task, push the update to all connected clients. HTMX has WebSocket support through the `ws` extension.
 - **Email notifications.** Send an email when a task is assigned to you or when a task you created is completed.
@@ -1429,13 +1429,13 @@ You have the tools. You have the knowledge. Go build something.
 
 *This is the final chapter of the core curriculum. If you want to see how to
 integrate third-party JavaScript libraries (like date pickers) with HTMX,
-continue to **Chapter 18 -- Integrating Third-Party JavaScript: Flatpickr**.
-After that, **Chapters 19-28 (Real-World Patterns)** cover error handling,
+continue to **[Chapter 18](18-flatpickr-and-third-party-js.md) -- Integrating Third-Party JavaScript: Flatpickr**.
+After that, **[Chapters 19-28](../04-real-world-patterns/19-error-handling-and-graceful-degradation.md) (Real-World Patterns)** cover error handling,
 response headers, inline editing, modals, `_hyperscript` recipes, dynamic
 forms, file uploads, accessibility, database performance, and background jobs.
-The appendices contain additional reference material: **Appendix A** collects
+The appendices contain additional reference material: **[Appendix A](../05-appendices/A1-bibliography-and-resources.md)** collects
 official documentation links, homepages, YouTube channels, and books for every
-tool used in this course, and **Appendix B** covers \_hyperscript (HTMX's
+tool used in this course, and **[Appendix B](../05-appendices/A2-hyperscript.md)** covers \_hyperscript (HTMX's
 companion client-side scripting language).*
 
 *Thank you for following along.*

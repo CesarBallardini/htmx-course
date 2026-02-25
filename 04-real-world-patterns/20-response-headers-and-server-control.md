@@ -2,7 +2,7 @@
 
 **Phase:** Real-World Patterns
 **Project:** "Teamwork" -- a collaborative task board
-**Previous:** Chapter 19 introduced structured error handling with
+**Previous:** [Chapter 19](19-error-handling-and-graceful-degradation.md) introduced structured error handling with
 `response-targets`, flash messages, and recovery patterns. This chapter
 moves from reacting to errors to **controlling the client from the server**
 -- deciding where content lands, how the URL bar updates, and when events
@@ -2510,7 +2510,7 @@ redirect vs. locate, and when to trigger events at each phase of the swap
 lifecycle. These are the tools you will reach for in every remaining chapter
 of this course.
 
-In **Chapter 21 -- Inline Editing**, we will use several of these headers
+In **[Chapter 21 -- Inline Editing](21-inline-editing.md)**, we will use several of these headers
 together. Inline editing is the pattern where a user clicks on a piece of
 text and it transforms into an editable input -- right there in the page, no
 modal, no separate form. The server returns the edit form when the user

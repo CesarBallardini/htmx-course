@@ -1350,13 +1350,13 @@ navigation). The page content will change, but the URL bar will also update
 9. **Form clearing is a UX detail worth getting right.** Use
    `hx-on::after-request="this.reset()"` for a simple one-liner, or return a
    fresh form from the server (covered properly with out-of-band swaps in
-   Chapter 9).
+   [Chapter 9](09-swap-strategies-and-targets.md)).
 
 ---
 
 ## What's Next
 
-In Chapter 8, we will add **server-side validation and error feedback**. Right
+In [Chapter 8](08-validation-and-error-feedback.md), we will add **server-side validation and error feedback**. Right
 now our form accepts anything -- empty titles, absurdly long strings, whatever
 the user types. We will introduce the `Result` type for validation, return
 HTTP 422 responses for invalid input, and render inline error messages that

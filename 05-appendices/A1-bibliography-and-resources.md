@@ -199,7 +199,7 @@ Chapter 13 for real-time updates.
 | GitHub | https://github.com/bigskysoftware/_hyperscript |
 
 \_hyperscript is the companion client-side scripting language introduced in
-Chapter 16 and covered in depth in Appendix B.
+[Chapter 16](../03-advanced/16-extensions-and-patterns.md) and covered in depth in [Appendix B](A2-hyperscript.md).
 
 ---
 
@@ -263,7 +263,7 @@ medium applications.
 
 mise is used throughout this course to install and manage Gleam and Erlang/OTP
 versions. The project root contains a `mise.toml` that pins compatible versions.
-See **Appendix C** for detailed installation instructions.
+See **[Appendix C](A3-installing-mise.md)** for detailed installation instructions.
 
 ### Docker
 
@@ -274,7 +274,7 @@ See **Appendix C** for detailed installation instructions.
 | Dockerfile reference | https://docs.docker.com/reference/dockerfile/ |
 | YouTube | https://www.youtube.com/@DockerInc |
 
-Docker is used in Chapter 17 for containerised deployment with multi-stage
+Docker is used in [Chapter 17](../03-advanced/17-deployment-and-production.md) for containerised deployment with multi-stage
 builds.
 
 ---
@@ -340,7 +340,7 @@ virtual machine.
 
 ## 11. Accessibility Tools
 
-These tools are referenced in **Chapter 26 -- Accessible HTMX** for testing
+These tools are referenced in **[Chapter 26 -- Accessible HTMX](../04-real-world-patterns/26-accessible-htmx.md)** for testing
 and auditing the accessibility of HTMX-powered applications.
 
 | Tool | Link | Description |
@@ -356,7 +356,7 @@ and auditing the accessibility of HTMX-powered applications.
 
 ## 12. SQLite Advanced Features
 
-These resources support **Chapter 27 -- Database Performance and Queries**.
+These resources support **[Chapter 27 -- Database Performance and Queries](../04-real-world-patterns/27-database-performance.md)**.
 
 | Resource | Link |
 |----------|------|

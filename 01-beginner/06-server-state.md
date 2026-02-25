@@ -1444,7 +1444,7 @@ the process dies, and the state is gone.
 
 7. **In-memory state is fast but ephemeral.** It is perfect for development
    and prototyping. For production, you need a database. We will add SQLite in
-   Chapter 17.
+   [Chapter 17](../03-advanced/17-deployment-and-production.md).
 
 8. **`element.to_string` vs `element.to_document_string`.** Use
    `to_document_string` for full pages (includes the doctype). Use `to_string`
@@ -1463,7 +1463,7 @@ Congratulations -- you have completed the beginner phase. You now have a
 working task board with a real server, type-safe HTML rendering, client-side
 interactivity via HTMX, and stateful server-side data managed by a BEAM actor.
 
-In the intermediate phase, starting with Chapter 7, we will tackle **form
+In the intermediate phase, starting with [Chapter 7](../02-intermediate/07-forms-and-user-input.md), we will tackle **form
 validation** -- making sure the data users submit is correct before we store
 it, and showing helpful error messages when it is not. The patterns you learned
 in this chapter (actors for state, context for dependency injection, fragments

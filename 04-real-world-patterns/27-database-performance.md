@@ -2,7 +2,7 @@
 
 **Phase:** Real-World Patterns
 **Project:** "Teamwork" -- a collaborative task board
-**Previous:** Chapter 26 made the Teamwork board accessible with ARIA attributes, focus management, and screen-reader-friendly HTMX patterns. Now we turn inward -- to the database queries that power every single swap.
+**Previous:** [Chapter 26](26-accessible-htmx.md) made the Teamwork board accessible with ARIA attributes, focus management, and screen-reader-friendly HTMX patterns. Now we turn inward -- to the database queries that power every single swap.
 
 ---
 
@@ -2138,4 +2138,4 @@ Be cautious with this approach: it injects raw HTML into the page. The `highligh
 
 The Teamwork database layer is now production-ready: indexed, paginated, searchable, and free of N+1 patterns. Every HTMX swap hits a fast query path.
 
-In **Chapter 28 -- Background Jobs with BEAM Processes** we will tackle work that does not belong in the request-response cycle: sending email notifications, generating reports, cleaning up stale data, and scheduling recurring maintenance. The BEAM's lightweight processes and OTP supervision trees make this natural -- no external job queue needed.
+In **[Chapter 28](28-background-jobs.md) -- Background Jobs with BEAM Processes** we will tackle work that does not belong in the request-response cycle: sending email notifications, generating reports, cleaning up stale data, and scheduling recurring maintenance. The BEAM's lightweight processes and OTP supervision trees make this natural -- no external job queue needed.

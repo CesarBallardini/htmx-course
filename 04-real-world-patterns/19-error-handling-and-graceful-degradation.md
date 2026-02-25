@@ -2,7 +2,7 @@
 
 **Phase:** Real-World Patterns
 **Project:** "Teamwork" -- a collaborative task board
-**Previous:** Chapter 18 integrated Flatpickr as a third-party JavaScript library,
+**Previous:** [Chapter 18](../03-advanced/18-flatpickr-and-third-party-js.md) integrated Flatpickr as a third-party JavaScript library,
 completing the Advanced phase. This chapter begins the Real-World Patterns section,
 where we shift focus from building features to making them resilient. Everything
 breaks eventually -- networks fail, servers crash, users disable JavaScript. The
@@ -2283,7 +2283,7 @@ no longer fragile -- it communicates problems clearly and gives users a path to
 recovery.
 
 But error handling is only half of the server-client communication story. In
-Chapter 20, we will explore **HTMX response headers and server-driven control**.
+[Chapter 20](20-response-headers-and-server-control.md), we will explore **HTMX response headers and server-driven control**.
 HTMX provides a set of response headers (`HX-Trigger`, `HX-Redirect`,
 `HX-Reswap`, `HX-Retarget`, and more) that let the server dynamically control
 what happens on the client after a request completes. Instead of hardcoding
@@ -2291,7 +2291,7 @@ every swap target and trigger in your HTML attributes, you can have the server
 decide at response time -- giving you a powerful feedback loop between your Gleam
 handlers and the browser.
 
-Together, Chapters 19 and 20 form the resilience and control foundation for every
+Together, Chapters 19 and [Chapter 20](20-response-headers-and-server-control.md) form the resilience and control foundation for every
 pattern that follows. Error handling tells the user when something went wrong.
 Response headers let the server orchestrate what happens next. Both are necessary
 for an application that feels responsive and trustworthy.

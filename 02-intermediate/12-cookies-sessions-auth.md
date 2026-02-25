@@ -1250,4 +1250,4 @@ Remember: signed cookies are secure against **tampering** but are not **encrypte
 
 ## What's Next
 
-This chapter concludes the intermediate phase. You now have a Teamwork app with routing, HTMX interactivity, actor-based state, multiple boards, and cookie-based authentication. In the advanced phase, we will add a real database with SQLite, server-sent events for real-time updates, and deploy the application to production.
+This chapter concludes the intermediate phase. You now have a Teamwork app with routing, HTMX interactivity, actor-based state, multiple boards, and cookie-based authentication. In the [advanced phase](../03-advanced/13-real-time-with-sse.md), we will add a real database with SQLite, server-sent events for real-time updates, and deploy the application to production.

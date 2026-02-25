@@ -2,7 +2,7 @@
 
 **Phase:** Real-World Patterns
 **Project:** "Teamwork" -- a collaborative task board
-**Previous:** Chapter 23 explored practical `_hyperscript` patterns for
+**Previous:** [Chapter 23](23-hyperscript-practical-patterns.md) explored practical `_hyperscript` patterns for
 client-side micro-interactions. We used `_hyperscript` to toggle classes,
 handle drag events, and animate elements without writing standalone
 JavaScript files.
@@ -2155,7 +2155,7 @@ is necessary versus when the existing DOM state is preserved automatically.
 
 ## What's Next
 
-In Chapter 25, we will tackle **File Uploads** -- letting users attach
+In [Chapter 25](25-file-uploads.md), we will tackle **File Uploads** -- letting users attach
 files to tasks using `hx-encoding="multipart/form-data"`, showing upload
 progress indicators, and handling `UploadedFile` data in Wisp. We will
 build a drag-and-drop upload zone and display file previews, all with

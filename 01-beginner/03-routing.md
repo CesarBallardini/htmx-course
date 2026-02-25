@@ -877,7 +877,7 @@ confirm you see your 404 page. The path `["boards", "123"]` does not match
 
 ## What's Next
 
-In Chapter 4 we will introduce HTMX's `hx-get` attribute to load content
+In [Chapter 4](04-first-htmx-interaction.md) we will introduce HTMX's `hx-get` attribute to load content
 dynamically without full page reloads. We will add a board list to the
 `/boards` page and load board details with HTMX partial responses -- your first
 taste of hypermedia-driven interactivity.

@@ -642,8 +642,8 @@ These are observation tasks -- there is no code to write. Just open your browser
 
 5. **Content types matter.** The `Content-Type` header tells the browser whether it is looking at HTML, plain text, JSON, CSS, or something else. Wisp sets the correct type for you when you use helpers like `html_response`, and it infers the type from the file extension when serving static files.
 
-6. **HTMX is loaded and waiting.** We included the HTMX script in our layout. It is not doing anything yet, but starting in Chapter 4 we will add `hx-*` attributes to our elements and watch the page come alive without writing any client-side JavaScript ourselves.
+6. **HTMX is loaded and waiting.** We included the HTMX script in our layout. It is not doing anything yet, but starting in [Chapter 4](04-first-htmx-interaction.md) we will add `hx-*` attributes to our elements and watch the page come alive without writing any client-side JavaScript ourselves.
 
 ---
 
-**Next up:** In Chapter 3 we will add routing so that different URLs show different pages, and we will give the "About" link somewhere to go.
+**Next up:** In [Chapter 3](03-routing.md) we will add routing so that different URLs show different pages, and we will give the "About" link somewhere to go.

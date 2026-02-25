@@ -946,7 +946,7 @@ about 8 routes, giving you 16 or more tests as a solid baseline.
 
 ## What's Next
 
-In Chapter 16, we will explore **HTMX extensions and advanced patterns** --
+In [Chapter 16](16-extensions-and-patterns.md), we will explore **HTMX extensions and advanced patterns** --
 adding response-targets for differentiated error handling, preloading for
 instant navigation, infinite scroll, smart polling, and a first look at
 `_hyperscript` for client-side micro-interactions. The Teamwork board gains

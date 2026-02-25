@@ -1526,7 +1526,7 @@ stats panel does not care *why* it is refreshing, only *that* it should refresh.
 9. **\_hyperscript complements HTMX for client-side behaviour.** HTMX talks to
    the server; \_hyperscript handles DOM manipulation, class toggling, and
    animations. Together they cover most interactions without writing vanilla
-   JavaScript. See Appendix B for the full reference.
+   JavaScript. See [Appendix B](../05-appendices/A2-hyperscript.md) for the full reference.
 
 ---
 
@@ -1536,11 +1536,11 @@ The Teamwork board now has extensions for error handling and preloading, infinit
 scroll for large lists, and smart polling with event coordination. These patterns
 cover the vast majority of real-world HTMX applications.
 
-In Chapter 17 we will look at **deployment and production readiness**: building
+In [Chapter 17](17-deployment-and-production.md) we will look at **deployment and production readiness**: building
 releases, configuring environment variables, serving behind a reverse proxy, and
 the final touches that take the Teamwork board from a development project to a
 production application.
 
 If you want to explore \_hyperscript further -- core syntax, essential commands,
-HTMX integration patterns, and hands-on exercises -- head to **Appendix B:
+HTMX integration patterns, and hands-on exercises -- head to **[Appendix B](../05-appendices/A2-hyperscript.md):
 \_hyperscript**.

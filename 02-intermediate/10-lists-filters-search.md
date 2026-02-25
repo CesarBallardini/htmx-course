@@ -2,7 +2,7 @@
 
 **Phase:** Intermediate
 **Project:** "Teamwork" -- a collaborative task board
-**Previous:** Chapter 9 introduced OOB swaps and CSS transitions. The task board can now add, delete, and toggle tasks with multi-area updates.
+**Previous:** [Chapter 9](09-swap-strategies-and-targets.md) introduced OOB swaps and CSS transitions. The task board can now add, delete, and toggle tasks with multi-area updates.
 
 ---
 
@@ -1232,7 +1232,7 @@ accept case-sensitive highlighting as a first pass.
 
 ## What's Next
 
-In Chapter 11 we will add **multiple boards and navigation** -- organizing
+In [Chapter 11](11-multiple-boards-navigation.md) we will add **multiple boards and navigation** -- organizing
 tasks into separate boards, adding `hx-boost` for instant page transitions,
 nested routing with path parameters, and breadcrumb navigation. The Teamwork
 app grows from a single list into a multi-board workspace.

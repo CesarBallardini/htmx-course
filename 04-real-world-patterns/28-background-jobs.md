@@ -2,7 +2,7 @@
 
 **Phase:** Real-World Patterns (final chapter)
 **Project:** "Teamwork" -- a collaborative task board
-**Previous:** Chapter 27 covered database performance -- WAL mode, query optimization, indexing strategies, and avoiding N+1 queries. Now we tackle the last major production concern: long-running work that should not block HTTP requests.
+**Previous:** [Chapter 27](27-database-performance.md) covered database performance -- WAL mode, query optimization, indexing strategies, and avoiding N+1 queries. Now we tackle the last major production concern: long-running work that should not block HTTP requests.
 
 ---
 
@@ -2648,24 +2648,24 @@ This is the final chapter of the Real-World Patterns section. Let us take a mome
 
 Over the last ten chapters, you moved from a working application to a production-grade system:
 
-- **Chapter 19** introduced error handling and graceful degradation -- structured error responses, retry patterns, and fallback UI so the application stays usable when things go wrong.
-- **Chapter 20** covered HTMX response headers and server-driven control -- using `HX-Trigger`, `HX-Redirect`, `HX-Retarget`, and other response headers to orchestrate client behavior from the server.
-- **Chapter 21** tackled inline editing with click-to-edit patterns -- swapping display elements for edit forms in place, saving with `hx-put`, and cancelling gracefully.
-- **Chapter 22** explored modal dialogs via HTMX -- loading modal content from the server, managing open/close state, and handling form submissions inside modals.
-- **Chapter 23** built practical \_hyperscript patterns -- combining HTMX with \_hyperscript for client-side interactions like toggling, animations, and keyboard shortcuts.
-- **Chapter 24** addressed dynamic and dependent forms -- cascading selects, conditional fields, and adding/removing form sections dynamically with HTMX.
-- **Chapter 25** implemented file uploads with progress indicators, using HTMX's built-in multipart support and background processing.
-- **Chapter 26** added keyboard shortcuts and accessibility, making the task board usable for everyone, not just mouse users.
-- **Chapter 27** covered database performance -- connection pooling, query optimization, indexing, and the N+1 problem.
-- **Chapter 28** (this chapter) built background job processing, periodic tasks, and supervision trees, using the BEAM's native concurrency to handle work that does not belong in HTTP handlers.
+- **[Chapter 19](19-error-handling-and-graceful-degradation.md)** introduced error handling and graceful degradation -- structured error responses, retry patterns, and fallback UI so the application stays usable when things go wrong.
+- **[Chapter 20](20-response-headers-and-server-control.md)** covered HTMX response headers and server-driven control -- using `HX-Trigger`, `HX-Redirect`, `HX-Retarget`, and other response headers to orchestrate client behavior from the server.
+- **[Chapter 21](21-inline-editing.md)** tackled inline editing with click-to-edit patterns -- swapping display elements for edit forms in place, saving with `hx-put`, and cancelling gracefully.
+- **[Chapter 22](22-modal-dialogs.md)** explored modal dialogs via HTMX -- loading modal content from the server, managing open/close state, and handling form submissions inside modals.
+- **[Chapter 23](23-hyperscript-practical-patterns.md)** built practical \_hyperscript patterns -- combining HTMX with \_hyperscript for client-side interactions like toggling, animations, and keyboard shortcuts.
+- **[Chapter 24](24-dynamic-and-dependent-forms.md)** addressed dynamic and dependent forms -- cascading selects, conditional fields, and adding/removing form sections dynamically with HTMX.
+- **[Chapter 25](25-file-uploads.md)** implemented file uploads with progress indicators, using HTMX's built-in multipart support and background processing.
+- **[Chapter 26](26-accessible-htmx.md)** added keyboard shortcuts and accessibility, making the task board usable for everyone, not just mouse users.
+- **[Chapter 27](27-database-performance.md)** covered database performance -- connection pooling, query optimization, indexing, and the N+1 problem.
+- **[Chapter 28](28-background-jobs.md)** (this chapter) built background job processing, periodic tasks, and supervision trees, using the BEAM's native concurrency to handle work that does not belong in HTTP handlers.
 
 Together, these chapters covered the patterns that separate a tutorial project from a real application. Not every application needs every pattern, but now you know they exist and how to implement them.
 
 ### Where to Go from Here
 
-**Appendix B** covers \_hyperscript, HTMX's companion client-side scripting language. If you have been using `attribute("_", "...")` in your code and want to understand it more deeply, start there.
+**[Appendix B](../05-appendices/A2-hyperscript.md)** covers \_hyperscript, HTMX's companion client-side scripting language. If you have been using `attribute("_", "...")` in your code and want to understand it more deeply, start there.
 
-**Appendix A** is the bibliography and resource guide. It collects the official documentation, homepages, repositories, and video channels for every tool and technology used in this course. Bookmark the ones you use most.
+**[Appendix A](../05-appendices/A1-bibliography-and-resources.md)** is the bibliography and resource guide. It collects the official documentation, homepages, repositories, and video channels for every tool and technology used in this course. Bookmark the ones you use most.
 
 ### Build Something
 
@@ -2685,6 +2685,6 @@ Go build something.
 
 ---
 
-*This is the final chapter of the HTMX with Gleam course. The appendices contain additional reference material: **Appendix A** collects documentation links, homepages, and resources for every tool used in this course, and **Appendix B** covers \_hyperscript.*
+*This is the final chapter of the HTMX with Gleam course. The appendices contain additional reference material: **[Appendix A](../05-appendices/A1-bibliography-and-resources.md)** collects documentation links, homepages, and resources for every tool used in this course, and **[Appendix B](../05-appendices/A2-hyperscript.md)** covers \_hyperscript.*
 
 *Thank you for reading.*

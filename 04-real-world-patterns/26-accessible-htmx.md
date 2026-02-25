@@ -2,7 +2,7 @@
 
 **Phase:** Real-World Patterns
 **Project:** "Teamwork" -- a collaborative task board
-**Previous:** Chapter 25 added file uploads with progress indicators and
+**Previous:** [Chapter 25](25-file-uploads.md) added file uploads with progress indicators and
 server-side validation. This chapter retrofits the entire
 application with accessibility features -- ARIA live regions, focus management,
 keyboard navigation, and automated testing.
@@ -2300,7 +2300,7 @@ regions announce every dynamic change, focus management guides the keyboard
 through every interaction, and `aria-busy` bridges the gap between visual
 loading states and assistive technology.
 
-In **Chapter 27 -- Database Performance**, we will tackle the backend side of
+In **[Chapter 27](27-database-performance.md) -- Database Performance**, we will tackle the backend side of
 real-world applications. We will replace the in-memory actor with a database,
 add pagination at the SQL level, implement connection pooling, and profile
 query performance -- all while keeping the HTMX frontend responsive and the

@@ -841,5 +841,4 @@ If you get stuck, here are some pointers:
 
 ---
 
-**Next chapter:** We will add forms to the Teamwork board, learning `hx-post`,
-form serialization, and how the server processes and validates form data in Gleam.
+**[Next chapter:](06-server-state.md)** We will track state on the server using Gleam actors, storing our task list in memory so every request works with the same data.

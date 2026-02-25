@@ -799,9 +799,9 @@ raw HTTP conversation, exactly as described in the theory section.
 
 ## What's Next
 
-In Chapter 2, we will introduce **Lustre** for generating HTML in a type-safe
+In [Chapter 2](02-serving-html-pages.md), we will introduce **Lustre** for generating HTML in a type-safe
 way and load **HTMX from a CDN** to prepare for our first interactive feature.
-Then in Chapter 3, we will add **routing** -- pattern matching on the request
+Then in [Chapter 3](03-routing.md), we will add **routing** -- pattern matching on the request
 path to return different pages for different routes.
 
 The Teamwork task board is just getting started.

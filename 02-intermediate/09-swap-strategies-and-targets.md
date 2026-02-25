@@ -1467,7 +1467,7 @@ then clear the task list, which is the correct behaviour.
 
 ## What's Next
 
-In Chapter 10, we will add **list filtering and search** -- letting users
+In [Chapter 10](10-lists-filters-search.md), we will add **list filtering and search** -- letting users
 filter tasks by status and search by title with instant results. We will use
 `hx-get` with query parameters, active search that fires on keyup with a
 debounce, and combine multiple filter controls into a single coordinated UI.

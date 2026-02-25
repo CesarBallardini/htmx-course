@@ -1153,7 +1153,7 @@ We now have forms that validate input and show clear error feedback. But there
 is a gap: when a task is successfully created, the form resets -- but the task
 list does not update. The user has to refresh the page to see their new task.
 
-In Chapter 9 we will solve this with **Out-of-Band (OOB) Swaps**. OOB swaps
+In [Chapter 9](09-swap-strategies-and-targets.md) we will solve this with **Out-of-Band (OOB) Swaps**. OOB swaps
 let a single server response update multiple parts of the page at once. The
 form will reset *and* the task list will update, all from one POST response.
 No page refresh needed.

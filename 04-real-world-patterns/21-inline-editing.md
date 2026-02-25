@@ -2,7 +2,7 @@
 
 **Phase:** Real-World Patterns
 **Project:** "Teamwork" -- a collaborative task board
-**Previous:** Chapter 20 introduced response headers (`HX-Trigger`,
+**Previous:** [Chapter 20](20-response-headers-and-server-control.md) introduced response headers (`HX-Trigger`,
 `HX-Retarget`, `HX-Reswap`) for server-driven control of HTMX behaviour.
 
 ---
@@ -2615,7 +2615,7 @@ let status = case list.key_find(formdata.values, "status") {
 
 ## What's Next
 
-In Chapter 22, we will build **modal dialogs** -- overlay panels that appear
+In [Chapter 22](22-modal-dialogs.md), we will build **modal dialogs** -- overlay panels that appear
 on top of the current page for creating and editing resources. We will learn
 how to load modal content from the server with HTMX, manage focus trapping
 with `_hyperscript`, handle the browser's Escape key and backdrop clicks for

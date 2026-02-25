@@ -2,7 +2,7 @@
 
 **Phase:** Advanced
 **Project:** "Teamwork" -- a collaborative task board
-**Previous:** Chapter 13 added real-time SSE. The app is feature-rich but needs security hardening.
+**Previous:** [Chapter 13](13-real-time-with-sse.md) added real-time SSE. The app is feature-rich but needs security hardening.
 
 ---
 
@@ -1439,6 +1439,6 @@ in the middleware chain, or applying it after the router instead of before.
 
 ---
 
-**Next chapter:** With our application secured, Chapter 15 will focus on
+**Next chapter:** With our application secured, [Chapter 15](15-testing.md) will focus on
 **testing** -- writing unit tests for validation logic, integration tests for
 routes, and testing HTMX interactions using `wisp/simulate`.

@@ -2,7 +2,7 @@
 
 **Phase:** Real-World Patterns
 **Project:** "Teamwork" -- a collaborative task board
-**Previous:** Chapter 21 introduced inline editing with `hx-get` and `hx-put`,
+**Previous:** [Chapter 21](21-inline-editing.md) introduced inline editing with `hx-get` and `hx-put`,
 swapping between read and edit views inside individual task rows.
 
 ---
@@ -2092,10 +2092,10 @@ closes the edit dialog, `taskDeleted` refreshes the task list.
 
 ## What's Next
 
-In **Chapter 23 -- _hyperscript Practical Patterns**, we will take a deeper look
+In **[Chapter 23 -- _hyperscript Practical Patterns](23-hyperscript-practical-patterns.md)**, we will take a deeper look
 at the `_hyperscript` language we have been using for client-side behaviour. You
 have already seen it for opening/closing dialogs, disabling buttons, and
-initializing third-party libraries. Chapter 23 will cover more patterns:
+initializing third-party libraries. [Chapter 23](23-hyperscript-practical-patterns.md) will cover more patterns:
 toggling classes, coordinating animations with HTMX swaps, building accessible
 dropdowns, and managing small client-side state without JavaScript modules. If
 HTMX handles the server communication, `_hyperscript` handles everything else

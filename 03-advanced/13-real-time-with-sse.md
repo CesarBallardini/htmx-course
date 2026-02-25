@@ -1659,7 +1659,7 @@ mist.event(string_tree.from_string(html))
 
 ---
 
-**Next chapter:** With our application now serving real-time updates, Chapter 14
+**Next chapter:** With our application now serving real-time updates, [Chapter 14](14-security-hardening.md)
 will focus on **security hardening** -- Content-Security-Policy headers, CSRF
 protection, rate limiting, and input sanitisation to make the Teamwork board
 production-safe.

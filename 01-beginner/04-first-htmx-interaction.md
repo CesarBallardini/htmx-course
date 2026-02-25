@@ -661,4 +661,4 @@ If you see a full HTML page in the response body, you are using `element.to_docu
 
 ## What's Next
 
-In this chapter, you made a button load content from the server. That is genuinely useful, but the data is still hardcoded. In Chapter 5, we will add `hx-post` to create new tasks from a form, introducing the request-response cycle for *writing* data, not just reading it. The Teamwork board is about to become truly interactive.
+In this chapter, you made a button load content from the server. That is genuinely useful, but the data is still hardcoded. In [Chapter 5](05-click-trigger-swap.md), we will add `hx-post` to create new tasks from a form, introducing the request-response cycle for *writing* data, not just reading it. The Teamwork board is about to become truly interactive.

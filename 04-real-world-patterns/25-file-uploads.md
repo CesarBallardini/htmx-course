@@ -2,7 +2,7 @@
 
 **Phase:** Real-World Patterns
 **Project:** "Teamwork" -- a collaborative task board
-**Previous:** Chapter 24 covered dynamic forms. Now we tackle one of the most
+**Previous:** [Chapter 24](24-dynamic-and-dependent-forms.md) covered dynamic forms. Now we tackle one of the most
 common real-world requirements: letting users attach files to tasks.
 
 ---
@@ -2236,7 +2236,7 @@ data. The `bytes_tree.from_bit_array` converts the `BitArray` from
 
 ## What's Next
 
-In **Chapter 26 -- Accessible HTMX**, we will address a crucial aspect of
+In **[Chapter 26](26-accessible-htmx.md) -- Accessible HTMX**, we will address a crucial aspect of
 real-world applications: making HTMX interactions work for all users, including
 those who rely on screen readers, keyboard navigation, and other assistive
 technologies. HTMX's dynamic content swaps present unique accessibility

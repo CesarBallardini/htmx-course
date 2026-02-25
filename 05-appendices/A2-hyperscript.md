@@ -781,7 +781,7 @@ after transitions complete) for smoother results.
   -- covers the philosophy behind HTMX and \_hyperscript in depth.
 - **Source code:** https://github.com/bigskysoftware/_hyperscript
 
-> **See also:** **Chapter 23 -- \_hyperscript Practical Patterns** for
+> **See also:** **[Chapter 23 -- \_hyperscript Practical Patterns](../04-real-world-patterns/23-hyperscript-practical-patterns.md)** for
 > production-ready recipes including character counters, accordions, clipboard
 > copy, drag-and-drop reorder, and guidance on when to switch from
 > \_hyperscript to JavaScript.
