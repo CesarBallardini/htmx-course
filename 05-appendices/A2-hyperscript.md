@@ -413,7 +413,7 @@ Example -- disable a button while an HTMX request is in flight:
 
 ### Teamwork example: HTMX + \_hyperscript together
 
-Here is how you might enhance the Teamwork task board from Chapter 16. The form
+Here is how you might enhance the Teamwork task board from [Chapter 16](../03-advanced/16-extensions-and-patterns.md). The form
 uses HTMX for the server request and \_hyperscript for client-side feedback:
 
 ```html
@@ -595,7 +595,7 @@ current element. When detected, the dropdown hides itself.
 
 ### Task 1 -- Fade-out dismiss for an error banner
 
-Add \_hyperscript to the error banner from Chapter 16 so that clicking the
+Add \_hyperscript to the error banner from [Chapter 16](../03-advanced/16-extensions-and-patterns.md) so that clicking the
 "Dismiss" button fades the banner out over 300ms and then removes it from the
 DOM.
 

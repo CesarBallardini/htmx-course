@@ -138,7 +138,7 @@ infrastructure and integrates with `gleam test`.
 | gleam_otp docs | https://hexdocs.pm/gleam_otp/ |
 
 These packages provide Gleam interfaces to Erlang/OTP primitives: processes,
-actors, supervisors, and the runtime system. The actor model used in Chapter 6
+actors, supervisors, and the runtime system. The actor model used in [Chapter 6](../01-beginner/06-server-state.md)
 onwards comes from `gleam_otp`.
 
 ---
@@ -155,7 +155,7 @@ All official HTMX extensions are documented at https://extensions.htmx.org.
 | npm / unpkg | https://unpkg.com/htmx-ext-response-targets/ |
 
 Swap different content into different targets based on HTTP status codes. Used in
-Chapter 16 for differentiated error handling.
+[Chapter 16](../03-advanced/16-extensions-and-patterns.md) for differentiated error handling.
 
 ### preload
 
@@ -165,7 +165,7 @@ Chapter 16 for differentiated error handling.
 | npm / unpkg | https://unpkg.com/htmx-ext-preload/ |
 
 Prefetch linked content on hover or mousedown so navigation feels instant. Used
-in Chapter 16 for instant navigation.
+in [Chapter 16](../03-advanced/16-extensions-and-patterns.md) for instant navigation.
 
 ### SSE (Server-Sent Events)
 
@@ -175,7 +175,7 @@ in Chapter 16 for instant navigation.
 | npm / unpkg | https://unpkg.com/htmx-ext-sse/ |
 
 Connect to an SSE endpoint and swap incoming messages into the DOM. Used in
-Chapter 13 for real-time updates.
+[Chapter 13](../03-advanced/13-real-time-with-sse.md) for real-time updates.
 
 ### Other extensions referenced
 

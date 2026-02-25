@@ -105,7 +105,7 @@ Here is the full picture:
 
 ### 1.2 Target and Swap Override Headers (HX-Retarget, HX-Reswap)
 
-In Chapter 9 we learned that `hx-target` tells HTMX which DOM element should
+In [Chapter 9](../02-intermediate/09-swap-strategies-and-targets.md) we learned that `hx-target` tells HTMX which DOM element should
 receive the response content, and `hx-swap` tells HTMX *how* to put it there
 (innerHTML, outerHTML, beforeend, etc.). These are set on the client as HTML
 attributes.
@@ -117,7 +117,7 @@ is a form that can succeed or fail:
 - **Validation error:** The error messages should replace the content inside
   `#form-container` using `innerHTML`.
 
-You *could* solve this with the `response-targets` extension (Chapter 16),
+You *could* solve this with the `response-targets` extension ([Chapter 16](../03-advanced/16-extensions-and-patterns.md)),
 which maps HTTP status codes to different targets on the client side. But
 `response-targets` requires you to decide the mapping at HTML-authoring time.
 What if the server needs to make a decision that the client cannot anticipate?
@@ -287,7 +287,7 @@ headers for this, and they behave very differently.
 
 **`HX-Redirect`** -- Full page navigation.
 
-We first saw this in Chapter 12. When HTMX receives a response with the
+We first saw this in [Chapter 12](../02-intermediate/12-cookies-sessions-auth.md). When HTMX receives a response with the
 `HX-Redirect` header, it performs a **full page navigation** -- equivalent
 to `window.location.href = url`. The entire page reloads. The browser
 fetches the new URL as a normal request (not an HTMX request).
@@ -342,7 +342,7 @@ The JSON object supports these keys:
 The JSON form is powerful. It lets the server say "navigate to this page,
 but only update the main content area, and use this specific swap strategy."
 This is the foundation for modal-to-page transitions, which we will explore
-in Chapter 22.
+in [Chapter 22](22-modal-dialogs.md).
 
 **`HX-Refresh`** -- Reload the current page.
 
@@ -389,7 +389,7 @@ need a clean slate.
 
 ### 1.5 Trigger Timing Headers (HX-Trigger, After-Swap, After-Settle)
 
-In Chapter 16 we learned that the `HX-Trigger` response header fires a
+In [Chapter 16](../03-advanced/16-extensions-and-patterns.md) we learned that the `HX-Trigger` response header fires a
 custom event on the element that made the request. Other elements can
 listen for that event and refresh themselves. This is the coordination
 mechanism that lets independent page sections stay in sync.
@@ -1187,7 +1187,7 @@ do not want the URL to change. Use `prevent_push`:
 
 ### Step 4 -- `HX-Location` for Modal-to-Page Navigation
 
-In Chapter 22 we will build modals. But here is a preview of a pattern that
+In [Chapter 22](22-modal-dialogs.md) we will build modals. But here is a preview of a pattern that
 uses `HX-Location`. Imagine the user clicks on a task in the list and sees
 a quick preview modal. The modal has a "View full page" button. When the user
 clicks it, you want to:

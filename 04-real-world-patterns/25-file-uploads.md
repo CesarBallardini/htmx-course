@@ -24,7 +24,7 @@ By the end of this chapter you will be able to:
 
 ### 1.1 File Upload Fundamentals
 
-Back in Chapter 7, we built forms that submit text data. Every form we have
+Back in [Chapter 7](../02-intermediate/07-forms-and-user-input.md), we built forms that submit text data. Every form we have
 written so far uses the default encoding: `application/x-www-form-urlencoded`.
 This encoding turns form fields into a flat string of key-value pairs:
 
@@ -117,7 +117,7 @@ attribute.attribute("hx-encoding", "multipart/form-data")
 
 There is no dedicated function for `hx-encoding` in the `hx` library, so we use
 the general `attribute.attribute(name, value)` function. This is the same
-pattern we used in Chapter 18 for custom attributes.
+pattern we used in [Chapter 18](../03-advanced/18-flatpickr-and-third-party-js.md) for custom attributes.
 
 You can also place `hx-encoding` on individual elements rather than the form.
 For example, if you have a button with `hx-post` outside a form, you can set
@@ -130,7 +130,7 @@ When a multipart request arrives at your Wisp server, the same
 `wisp.require_form` function you already know handles it. The difference is in
 what it gives you back.
 
-Recall from Chapter 7 that `wisp.require_form` returns a `FormData` value:
+Recall from [Chapter 7](../02-intermediate/07-forms-and-user-input.md) that `wisp.require_form` returns a `FormData` value:
 
 ```gleam
 use form_data <- wisp.require_form(req)
@@ -548,7 +548,7 @@ Two things to notice:
 
 **`wisp.serve_static(req, under: "/uploads", from: upload_directory())`** --
 We add a second `serve_static` call that serves uploaded files from the upload
-directory. This reuses the same pattern from Chapter 17 where we set up static
+directory. This reuses the same pattern from [Chapter 17](../03-advanced/17-deployment-and-production.md) where we set up static
 file serving for CSS and JavaScript. Any file in the upload directory will be
 accessible at `/uploads/<filename>`.
 
@@ -625,7 +625,7 @@ fn upload_attachment(
 Let us trace through this step by step.
 
 **`use form_data <- wisp.require_form(req)`** -- Same function we used in
-Chapter 7, but this time Wisp detects the `multipart/form-data` content type
+[Chapter 7](../02-intermediate/07-forms-and-user-input.md), but this time Wisp detects the `multipart/form-data` content type
 and parses the multipart body. Text fields still go into `form_data.values`.
 Files go into `form_data.files`.
 
@@ -798,7 +798,7 @@ Let us examine the design decisions.
 **`result.try` chaining.** Each validation function returns
 `Result(Nil, String)`. Using `result.try`, we chain them so the first failure
 short-circuits and returns the error message. This is the same validation
-pattern from Chapter 8, adapted for file uploads.
+pattern from [Chapter 8](../02-intermediate/08-validation-and-error-feedback.md), adapted for file uploads.
 
 **Extension checking with `list.contains`.** We lowercase the extension with
 `string.lowercase` and check it against the allowlist. This means `photo.PNG`,
@@ -998,7 +998,7 @@ attachment. We use `hx.swap(hx.OuterHTML)` so the entire attachment item is
 replaced by the server's response (which will be empty, effectively removing
 the item from the list). The `hx-confirm` attribute adds a browser
 confirmation dialog before the delete request is sent -- the same pattern from
-Chapter 14.
+[Chapter 14](../03-advanced/14-security-hardening.md).
 
 **`hx.target(hx.Selector("#attachment-" <> attachment.id))`** -- Targets the
 specific attachment item for removal. Each attachment has a unique ID, so

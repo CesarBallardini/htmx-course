@@ -74,7 +74,7 @@ The pattern has two states:
 **When NOT to use inline editing:**
 
 - The edit form is complex with many fields, file uploads, or rich text editors.
-  Use a separate page or a modal dialog (which we will cover in Chapter 22).
+  Use a separate page or a modal dialog (which we will cover in [Chapter 22](22-modal-dialogs.md)).
 - The item needs context that is not visible in the list view. A dedicated edit
   page can provide that context.
 
@@ -120,7 +120,7 @@ the individual items.
 ### 1.3 Method Override for PUT
 
 HTML forms only support `GET` and `POST`. But semantically, updating an
-existing resource should be a `PUT` request. We faced this in Chapter 11 with
+existing resource should be a `PUT` request. We faced this in [Chapter 11](../02-intermediate/11-multiple-boards-navigation.md) with
 `DELETE`, and the solution is the same: the **method override** pattern.
 
 The form declares `method="post"` (because HTML requires it), but includes a
@@ -557,7 +557,7 @@ over and sends the request via AJAX.
 
 **The hidden `_method` field** with `attribute.value("put")` tells the
 server's `wisp.method_override` middleware to treat this POST as a PUT. This
-is the method override pattern from Chapter 11.
+is the method override pattern from [Chapter 11](../02-intermediate/11-multiple-boards-navigation.md).
 
 **The `_hyperscript` on load handler** sets focus to the first input field
 when the form appears. We also set `attribute.autofocus(True)` on the title
@@ -1036,7 +1036,7 @@ pub fn task_edit_form(
 
 When a task is updated, other parts of the page might need to know about it.
 For example, a task summary sidebar, a progress counter, or a colleague's
-browser window connected via SSE (Chapter 13).
+browser window connected via SSE ([Chapter 13](../03-advanced/13-real-time-with-sse.md)).
 
 In Step 3, our `update_task` handler already sets the response header:
 
@@ -1098,7 +1098,7 @@ The flow:
 
 Two elements update from a single user action. The inline edit returns the
 display view directly (via the main swap). The counter refreshes itself via
-a triggered request. This is the event coordination pattern from Chapter 20
+a triggered request. This is the event coordination pattern from [Chapter 20](20-response-headers-and-server-control.md)
 applied to inline editing.
 
 For more complex payloads, you can use JSON in the `HX-Trigger` header:

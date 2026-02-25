@@ -185,7 +185,7 @@ The `input._flatpickr` guard is important. Flatpickr stores a reference to its i
 
 **Approach B: `_hyperscript` Inline**
 
-If you loaded `_hyperscript` (covered in Appendix B), you can initialize Flatpickr directly on the element with a single attribute:
+If you loaded `_hyperscript` (covered in [Appendix B](../05-appendices/A2-hyperscript.md)), you can initialize Flatpickr directly on the element with a single attribute:
 
 ```html
 <input name="due_date"
@@ -572,7 +572,7 @@ fn layout(content: element.Element(Nil)) -> element.Element(Nil) {
 }
 ```
 
-Three new tags: Flatpickr CSS, Flatpickr JS, and `_hyperscript`. All loaded from CDNs with no build step. If you self-hosted HTMX in Chapter 17, you can download and self-host these as well.
+Three new tags: Flatpickr CSS, Flatpickr JS, and `_hyperscript`. All loaded from CDNs with no build step. If you self-hosted HTMX in [Chapter 17](17-deployment-and-production.md), you can download and self-host these as well.
 
 ### Step 4 -- Add Due Date Field to the Task Form
 

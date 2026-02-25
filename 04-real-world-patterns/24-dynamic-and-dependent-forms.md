@@ -135,7 +135,7 @@ server-dependent data, and you want instant feedback with zero network
 latency. It is purely a visibility toggle -- no data fetching involved.
 
 In this chapter we will use Approach A for the due-date section because
-it involves Flatpickr initialization (which we covered in Chapter 18),
+it involves Flatpickr initialization (which we covered in [Chapter 18](../03-advanced/18-flatpickr-and-third-party-js.md)),
 and the server needs to render the Flatpickr input with the correct
 `_hyperscript` init attribute. But we will also show Approach B as an
 alternative for simpler cases.
@@ -198,7 +198,7 @@ or form body parameters (for POST). The server can read them, use them for
 rendering decisions, and pass them back as `value` attributes in the
 response so the user's input is preserved.
 
-This is the same `hx-include` pattern we used in Chapter 10 for coordinating
+This is the same `hx-include` pattern we used in [Chapter 10](../02-intermediate/10-lists-filters-search.md) for coordinating
 the search box and filter tabs. The principle is the same: when multiple
 pieces of state need to travel together, `hx-include` bundles them into a
 single request.
@@ -685,7 +685,7 @@ fn due_date_section(current_date: String) -> Element(t) {
 
 The `due_date_section` function renders a text input with a `_hyperscript`
 attribute that initializes Flatpickr when the element is loaded into the
-DOM. This is the same pattern from Chapter 18: `on load call flatpickr(me, {...})`.
+DOM. This is the same pattern from [Chapter 18](../03-advanced/18-flatpickr-and-third-party-js.md): `on load call flatpickr(me, {...})`.
 Every time HTMX swaps this element into the page, `_hyperscript` fires the
 `load` event and Flatpickr initializes on the new input.
 

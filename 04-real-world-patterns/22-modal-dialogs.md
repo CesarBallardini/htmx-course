@@ -277,7 +277,7 @@ the same header, and other elements on the page can listen for it.
 
 ### 1.5 Forms Inside Modals
 
-Forms inside modals follow the same validation pattern from Chapter 8, with one
+Forms inside modals follow the same validation pattern from [Chapter 8](../02-intermediate/08-validation-and-error-feedback.md), with one
 twist: the form lives inside the dialog, and the server response must stay
 inside the dialog.
 
@@ -888,7 +888,7 @@ HTMX dispatches the `taskCreated` event on the body. The task list hears it
 and fires a GET request to reload itself. The modal closes and the task list
 updates -- all from a single server response.
 
-This is the same event coordination pattern from Chapter 16, now applied to
+This is the same event coordination pattern from [Chapter 16](../03-advanced/16-extensions-and-patterns.md), now applied to
 modal workflows.
 
 ### Step 7 -- Confirmation Modal for Delete

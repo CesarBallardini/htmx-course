@@ -175,9 +175,9 @@ Once you move work to the background, the client needs a way to know when it fin
 
 **Polling.** The client asks the server repeatedly at a fixed interval. HTMX makes this trivially easy with `hx-trigger="every 2s"`. The endpoint returns the current status as an HTML fragment. When the status is "complete," the response includes the result and stops the polling by not including the polling trigger in the returned HTML.
 
-This is the approach from Chapter 16 (extensions and patterns). It is simple, stateless on the server side, and works through any proxy or CDN. The downside is latency -- the client might wait up to one polling interval after the job finishes before it sees the result.
+This is the approach from [Chapter 16](../03-advanced/16-extensions-and-patterns.md) (extensions and patterns). It is simple, stateless on the server side, and works through any proxy or CDN. The downside is latency -- the client might wait up to one polling interval after the job finishes before it sees the result.
 
-**Server-Sent Events.** The server pushes status updates to the client as they happen. This is the approach from Chapter 13 (real-time with SSE). It is more responsive -- the client sees progress updates the instant they happen -- but requires a persistent connection.
+**Server-Sent Events.** The server pushes status updates to the client as they happen. This is the approach from [Chapter 13](../03-advanced/13-real-time-with-sse.md) (real-time with SSE). It is more responsive -- the client sees progress updates the instant they happen -- but requires a persistent connection.
 
 For most background jobs, polling is the better choice. It is simpler to implement, easier to debug, and does not require SSE infrastructure. Use SSE when you need real-time progress updates (like a file upload progress bar) or when many clients are watching the same job.
 
@@ -925,7 +925,7 @@ The `handle_generate_report` handler enqueues the job, gets back an ID, and retu
 
 ### Step 4 -- Polling Progress with `hx-trigger="every 2s"`
 
-Now we build the HTMX fragments that show progress and automatically poll for updates. This is the technique from Chapter 16 applied to background jobs.
+Now we build the HTMX fragments that show progress and automatically poll for updates. This is the technique from [Chapter 16](../03-advanced/16-extensions-and-patterns.md) applied to background jobs.
 
 ```gleam
 // src/teamwork/views.gleam
@@ -1075,7 +1075,7 @@ pub fn job_progress_fragment(
 
 The key insight here is how polling starts and stops. When the job is `Pending` or `InProgress`, the fragment includes `hx.trigger_polling(...)` which generates the `hx-trigger="every 2s"` attribute. HTMX automatically sends a GET request every two seconds, and the response -- which is a new fragment -- replaces the old one via `hx.swap(hx.OuterHTML)`.
 
-When the job reaches `Complete` or `Failed`, the response fragment does **not** include a polling trigger. HTMX sees that the replacement element has no `hx-trigger="every 2s"`, so polling stops. This is the same self-canceling pattern from Chapter 16.
+When the job reaches `Complete` or `Failed`, the response fragment does **not** include a polling trigger. HTMX sees that the replacement element has no `hx-trigger="every 2s"`, so polling stops. This is the same self-canceling pattern from [Chapter 16](../03-advanced/16-extensions-and-patterns.md).
 
 The flow looks like this:
 
@@ -1124,7 +1124,7 @@ The progress bar fills up as the job progresses. When it completes, the user see
 
 Polling every two seconds is good enough for most background jobs. But if you want more responsive progress updates -- or if many clients are watching the same job -- SSE is a better fit.
 
-This builds on the SSE patterns from Chapter 13. The difference is that instead of broadcasting task list changes, we are broadcasting job progress updates.
+This builds on the SSE patterns from [Chapter 13](../03-advanced/13-real-time-with-sse.md). The difference is that instead of broadcasting task list changes, we are broadcasting job progress updates.
 
 First, the SSE endpoint:
 
@@ -1264,7 +1264,7 @@ For most Teamwork use cases, polling is sufficient. Use the SSE approach when yo
 
 ### Step 6 -- Periodic Cleanup Worker
 
-The Teamwork application stores uploaded files (from Chapter 25) in a temporary directory. After files are processed, the originals should be cleaned up. Instead of doing this on every upload, we run a periodic cleanup job that sweeps old files once per hour.
+The Teamwork application stores uploaded files (from [Chapter 25](25-file-uploads.md)) in a temporary directory. After files are processed, the originals should be cleaned up. Instead of doing this on every upload, we run a periodic cleanup job that sweeps old files once per hour.
 
 ```gleam
 // src/teamwork/cleanup.gleam
@@ -1610,13 +1610,13 @@ Every request handler can now enqueue jobs, check job status, or trigger cleanup
 
 When a worker crashes, the "let it crash" philosophy means you do not write defensive code in every function. Instead, you write clean, straightforward code that handles the normal case. The supervisor handles the abnormal cases by restarting the worker in a known-good state.
 
-There is one caveat: when the job worker restarts, its in-memory job queue is lost. Jobs that were `Pending` or `InProgress` at the time of the crash are gone. For a production system, you would want to persist the job queue to the database (as we discussed in Chapter 27) so that pending jobs survive restarts. The actor would load its queue from the database on startup, and update the database as jobs progress.
+There is one caveat: when the job worker restarts, its in-memory job queue is lost. Jobs that were `Pending` or `InProgress` at the time of the crash are gone. For a production system, you would want to persist the job queue to the database (as we discussed in [Chapter 27](27-database-performance.md)) so that pending jobs survive restarts. The actor would load its queue from the database on startup, and update the database as jobs progress.
 
 This is a common pattern in BEAM applications: use actors for fast, in-memory processing, but back them with a database for durability. The actor is the fast path; the database is the safety net.
 
 ### Step 8 -- Upload Thumbnail Processing
 
-Let us connect background jobs to the file upload system from Chapter 25. When a user uploads an image to a task, we want to generate a thumbnail in the background rather than making the user wait.
+Let us connect background jobs to the file upload system from [Chapter 25](25-file-uploads.md). When a user uploads an image to a task, we want to generate a thumbnail in the background rather than making the user wait.
 
 The upload handler:
 
@@ -2517,7 +2517,7 @@ html.div(
 )
 ```
 
-The toast endpoint returns a small `<div>` with a CSS animation that fades out after a few seconds. You can use `_hyperscript` (from Appendix B) for the auto-dismiss: `attribute("_", "on load wait 3s then remove me")`.
+The toast endpoint returns a small `<div>` with a CSS animation that fades out after a few seconds. You can use `_hyperscript` (from [Appendix B](../05-appendices/A2-hyperscript.md)) for the auto-dismiss: `attribute("_", "on load wait 3s then remove me")`.
 
 ### Hint for Exercise 2
 

@@ -47,7 +47,7 @@ interval.
 ```
 
 HTMX makes polling trivially easy with `hx-trigger="every 5s"`. We used this
-pattern back in Chapter 5 for a timestamp display.
+pattern back in [Chapter 5](../01-beginner/05-click-trigger-swap.md) for a timestamp display.
 
 **Advantages:**
 - Dead simple to implement -- no special server infrastructure

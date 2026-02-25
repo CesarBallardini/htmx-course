@@ -53,7 +53,7 @@ because extensions are just JavaScript, the Gleam side of things is straightforw
 
 ### 1.2 The `response-targets` Extension
 
-In Chapter 8 we learned that HTMX swaps the response into the target regardless
+In [Chapter 8](../02-intermediate/08-validation-and-error-feedback.md) we learned that HTMX swaps the response into the target regardless
 of the HTTP status code. That default behaviour is useful for simple forms: a 422
 response replaces the form with error-annotated HTML, and the user sees what went
 wrong.
@@ -134,7 +134,7 @@ self-replicating loader.
 
 ### 1.5 Advanced Polling Patterns
 
-In Chapter 5 we covered basic polling with `hx-trigger="every 5s"`. That works,
+In [Chapter 5](../01-beginner/05-click-trigger-swap.md) we covered basic polling with `hx-trigger="every 5s"`. That works,
 but it has limitations:
 
 **Problem 1: Polling when the tab is hidden.** If the user switches to another
@@ -234,7 +234,7 @@ covered here are stable, but the language is still evolving. Pin your version
 in production.
 
 For a complete reference -- core syntax, essential commands, HTMX integration
-patterns, and hands-on exercises -- see **Appendix B: \_hyperscript**.
+patterns, and hands-on exercises -- see **[Appendix B](../05-appendices/A2-hyperscript.md): \_hyperscript**.
 
 ---
 

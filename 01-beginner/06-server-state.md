@@ -46,7 +46,7 @@ There are three common approaches to persisting data on the server:
 | **In-memory**   | Lost on restart          | Very fast    | Lower      |
 
 For production applications, a database is almost always the right choice. We
-will add SQLite in Chapter 17. But for learning purposes, in-memory state is
+will add SQLite in [Chapter 17](../03-advanced/17-deployment-and-production.md). But for learning purposes, in-memory state is
 perfect: it is fast, requires no setup, and lets us focus on the patterns
 rather than the plumbing.
 
@@ -76,7 +76,7 @@ A BEAM process is:
   Each process has a mailbox where incoming messages queue up, and the process
   handles them one at a time, in order.
 
-When you started your Mist server in Chapter 1, the BEAM was already creating
+When you started your Mist server in [Chapter 1](01-how-the-web-works.md), the BEAM was already creating
 a new process for every incoming HTTP request. You just did not need to think
 about it. Now we are going to create a process deliberately -- one that holds
 our task data and responds to requests for it.
@@ -178,7 +178,7 @@ exactly what it needs, the compiler verifies it, and there is no hidden magic.
 
 One important note: **in-memory state is lost when the server restarts.** If
 you stop `gleam run` and start it again, the actor is created fresh with the
-initial seed data. This is fine for development. In Chapter 17, we will add
+initial seed data. This is fine for development. In [Chapter 17](../03-advanced/17-deployment-and-production.md), we will add
 SQLite for persistence that survives restarts.
 
 ---
@@ -600,7 +600,7 @@ A few things to notice:
 
 2. We generate a simple ID with `int.random(1_000_000_000)` -- a random integer
    up to one billion, converted to a string. This is not globally unique, but
-   it is good enough for a development task board. In Chapter 17, the database
+   it is good enough for a development task board. In [Chapter 17](../03-advanced/17-deployment-and-production.md), the database
    will handle ID generation.
 
 3. We use `actor.send` (not `actor.call`) for `AddTask` because we do not need
@@ -1235,7 +1235,7 @@ the count stays accurate after every action.
 fragment returned by your add, delete, and toggle handlers. You could wrap
 both the count paragraph and the task list in a parent `<div>` and target that
 instead. Alternatively, you could return two separate fragments using
-out-of-band swaps (`hx-swap-oob`), which we will cover properly in Chapter 9.
+out-of-band swaps (`hx-swap-oob`), which we will cover properly in [Chapter 9](../02-intermediate/09-swap-strategies-and-targets.md).
 For now, the wrapper `<div>` approach is recommended.
 
 **Acceptance criteria:** The count text updates immediately after adding,
@@ -1265,7 +1265,7 @@ the list. The task count updates. Refreshing the page confirms they are gone.
    that the task list is back to the three seed tasks -- your changes are gone.
 
 This is the fundamental limitation of in-memory state. Understand it now so
-that the motivation for adding a database in Chapter 17 is crystal clear.
+that the motivation for adding a database in [Chapter 17](../03-advanced/17-deployment-and-production.md) is crystal clear.
 
 ---
 

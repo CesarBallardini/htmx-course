@@ -17,7 +17,7 @@ By the end of this chapter you will be able to:
 
 ### The Problem with String Concatenation
 
-In Chapter 1 we returned a tiny HTML snippet as a raw string:
+In [Chapter 1](01-how-the-web-works.md) we returned a tiny HTML snippet as a raw string:
 
 ```gleam
 "<h1>Hello from Teamwork!</h1>"
@@ -86,11 +86,11 @@ When a web server sends a response, it includes a `Content-Type` header that tel
 | `text/plain`           | Displays the raw text with no formatting.      |
 | `application/json`     | Treats the response as structured data (APIs). |
 
-In Chapter 1, `wisp.html_response` set the content type to `text/html` for us automatically. We will continue using that helper. If you ever need to return JSON (for an API endpoint, for example), Wisp has `wisp.json_response`.
+In [Chapter 1](01-how-the-web-works.md), `wisp.html_response` set the content type to `text/html` for us automatically. We will continue using that helper. If you ever need to return JSON (for an API endpoint, for example), Wisp has `wisp.json_response`.
 
 ### A Note on the `hx` Library
 
-Later in this course (Chapter 4) we will install a small library called `hx` that gives us **typed HTMX attributes** for Lustre. Instead of writing:
+Later in this course ([Chapter 4](04-first-htmx-interaction.md)) we will install a small library called `hx` that gives us **typed HTMX attributes** for Lustre. Instead of writing:
 
 ```gleam
 attribute("hx-get", "/tasks")
@@ -108,7 +108,7 @@ We mention it now so you know it exists. For this chapter we only need standard 
 
 ## Code Walkthrough
 
-We are going to make three changes to the project from Chapter 1:
+We are going to make three changes to the project from [Chapter 1](01-how-the-web-works.md):
 
 1. Add Lustre as a dependency.
 2. Rewrite `handle_request` to return a full HTML page built with Lustre.
@@ -188,7 +188,7 @@ Let us walk through what each piece does.
 
 **`html.link([...])`** -- Another void element. We point it at `/static/css/style.css`. The `/static` prefix is important: Wisp will intercept any request that starts with `/static` and try to serve a matching file from disk.
 
-**`html.script([attribute("src", "...")], "")`** -- Loads HTMX from the unpkg CDN. The second argument is the inline script body, which we leave as an empty string because all the code lives in the external file. We are loading HTMX now so that it is available the moment we need it in Chapter 4.
+**`html.script([attribute("src", "...")], "")`** -- Loads HTMX from the unpkg CDN. The second argument is the inline script body, which we leave as an empty string because all the code lives in the external file. We are loading HTMX now so that it is available the moment we need it in [Chapter 4](04-first-htmx-interaction.md).
 
 **`html.body([], [content])`** -- Wraps whatever page-specific content we pass in.
 
@@ -214,7 +214,7 @@ Two small details worth noticing:
 
 ### Step 4 -- Update `handle_request`
 
-Replace the handler from Chapter 1 with:
+Replace the handler from [Chapter 1](01-how-the-web-works.md) with:
 
 ```gleam
 fn handle_request(req: wisp.Request) -> wisp.Response {
@@ -517,7 +517,7 @@ Add a `<nav>` element at the very top of the `<body>`, before the page content. 
 - A link to `"/"` with the text "Home".
 - A link to `"/about"` with the text "About".
 
-These links will not lead anywhere useful yet (clicking "About" will show the same home page because we have not added routing). We will fix that in Chapter 3.
+These links will not lead anywhere useful yet (clicking "About" will show the same home page because we have not added routing). We will fix that in [Chapter 3](03-routing.md).
 
 **Hint:** Modify the `layout` function so that `html.body` contains the nav first and then the content.
 

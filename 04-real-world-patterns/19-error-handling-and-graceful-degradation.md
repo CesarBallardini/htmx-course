@@ -74,8 +74,8 @@ Here is the full breakdown:
 
 The first thing to notice: validation errors are not really "errors" in the
 operational sense. They are expected outcomes of user input. We already handle them
-beautifully with 422 responses and inline form re-rendering (Chapter 8). The
-`response-targets` extension (Chapter 16) lets us route 422 responses to a different
+beautifully with 422 responses and inline form re-rendering ([Chapter 8](../02-intermediate/08-validation-and-error-feedback.md)). The
+`response-targets` extension ([Chapter 16](../03-advanced/16-extensions-and-patterns.md)) lets us route 422 responses to a different
 target than 200 responses. Validation errors are a solved problem.
 
 The unsolved problems are the other three categories. Network errors produce no HTTP

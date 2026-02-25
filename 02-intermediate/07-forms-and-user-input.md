@@ -165,7 +165,7 @@ appear in the list instantly -- without a page reload.
 
 ### Where We Left Off
 
-After Chapter 6, our Teamwork app has:
+After [Chapter 6](../01-beginner/06-server-state.md), our Teamwork app has:
 
 - A Mist/Wisp server with routing.
 - A layout function that renders full pages with Lustre.
@@ -334,7 +334,7 @@ fn create_task(req: wisp.Request, ctx: Context) -> wisp.Response {
 There is a lot happening here, so let us take it apart.
 
 **`use form_data <- wisp.require_form(req)`** -- This is the `use` pattern we
-first saw in Chapter 1 with `wisp.log_request`. The `wisp.require_form`
+first saw in [Chapter 1](../01-beginner/01-how-the-web-works.md) with `wisp.log_request`. The `wisp.require_form`
 function reads the request body and parses it. If parsing succeeds, it calls our
 continuation with the parsed `FormData`. If it fails (bad content type, body too
 large, parse error), it short-circuits and returns a `400` response. We never
@@ -357,7 +357,7 @@ The implementation is not critical for this chapter.
 
 **`actor.send(ctx.tasks, AddTask(task))`** -- Sends a message to the task
 actor telling it to store the new task. This is the same actor pattern from
-Chapter 6. The actor holds the canonical list of tasks in memory.
+[Chapter 6](../01-beginner/06-server-state.md). The actor holds the canonical list of tasks in memory.
 
 **Status code `201`** -- We return `201 Created` instead of `200 OK`. This is
 semantically correct: a new resource was created. HTMX does not care about the
@@ -481,7 +481,7 @@ This is a small amount of inline JavaScript, which might feel like it
 contradicts the "no JavaScript" philosophy. But it is a one-liner that handles
 a common UX need. HTMX is pragmatic, not dogmatic. The alternative -- having the
 server return a fresh form -- requires out-of-band swaps, which we will cover in
-Chapter 9.
+[Chapter 9](09-swap-strategies-and-targets.md).
 
 ### Step 7 -- Styling the Form
 
@@ -553,7 +553,7 @@ that feels polished and one that feels like a prototype.
 ## 3. Full Code Listing
 
 Here is the complete updated code after this chapter. Files that have not changed
-from Chapter 6 are omitted.
+from [Chapter 6](../01-beginner/06-server-state.md) are omitted.
 
 ### `gleam.toml`
 
@@ -1129,7 +1129,7 @@ For an extra challenge, instead of using `hx-on::after-request`, try a different
 approach: have the server return both the new task item AND a fresh empty form.
 You can do this by targeting a wrapper `<div>` that contains both the form and
 the task list, and returning the full contents. (This is a stepping stone toward
-out-of-band swaps, which we will cover properly in Chapter 9.)
+out-of-band swaps, which we will cover properly in [Chapter 9](09-swap-strategies-and-targets.md).)
 
 **Acceptance criteria:** After submitting a task, the title input, description
 textarea, and assignee dropdown all return to their default/empty state.
@@ -1283,7 +1283,7 @@ For the alternative approach (server returns fresh form + new task), you would
 need to wrap the form and task list in a single container, target that container,
 and have the POST handler return the complete contents (fresh form + full task
 list). This works but is less efficient because it re-renders everything. The
-proper solution using `hx-swap-oob` comes in Chapter 9.
+proper solution using `hx-swap-oob` comes in [Chapter 9](09-swap-strategies-and-targets.md).
 
 ### Hint for Task 4
 

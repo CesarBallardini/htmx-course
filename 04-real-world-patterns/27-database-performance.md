@@ -14,7 +14,7 @@ By the end of this chapter you will be able to:
 2. Write `CREATE INDEX` migrations and measure improvement with `EXPLAIN QUERY PLAN`.
 3. Replace in-memory pagination with SQL `LIMIT`/`OFFSET` and explain the deep-page problem.
 4. Implement cursor-based (keyset) pagination for efficient deep navigation.
-5. Add full-text search using SQLite FTS5, replacing the `LIKE` pattern from Chapter 10.
+5. Add full-text search using SQLite FTS5, replacing the `LIKE` pattern from [Chapter 10](../02-intermediate/10-lists-filters-search.md).
 6. Identify and fix N+1 query patterns with JOINs.
 
 ---
@@ -148,7 +148,7 @@ Get in the habit of running `EXPLAIN QUERY PLAN` on any query you write. It take
 
 ### 1.4 Pagination: Offset vs Cursor
 
-In Chapter 16 we implemented infinite scroll with in-memory pagination. The server loaded all tasks from the database, then used `list.drop` and `list.take` in Gleam to extract the right page:
+In [Chapter 16](../03-advanced/16-extensions-and-patterns.md) we implemented infinite scroll with in-memory pagination. The server loaded all tasks from the database, then used `list.drop` and `list.take` in Gleam to extract the right page:
 
 ```gleam
 // Chapter 16 approach: load everything, slice in memory
@@ -203,11 +203,11 @@ The trade-offs between the two approaches:
 | **Consistent results**| May skip/duplicate on insert  | Stable (never skips/duplicates)  |
 | **Best for**          | Small datasets, numbered pages | Large datasets, infinite scroll  |
 
-For infinite scroll -- which is our Teamwork pattern from Chapter 16 -- cursor-based pagination is a natural fit. The user never needs to jump to "page 47." They just keep scrolling, and each batch picks up where the last one left off.
+For infinite scroll -- which is our Teamwork pattern from [Chapter 16](../03-advanced/16-extensions-and-patterns.md) -- cursor-based pagination is a natural fit. The user never needs to jump to "page 47." They just keep scrolling, and each batch picks up where the last one left off.
 
 ### 1.5 Full-Text Search with FTS5
 
-In Chapter 10 we implemented live search using the SQL `LIKE` operator:
+In [Chapter 10](../02-intermediate/10-lists-filters-search.md) we implemented live search using the SQL `LIKE` operator:
 
 ```sql
 SELECT id, title, done FROM tasks
@@ -446,7 +446,7 @@ Three indexes, each serving a specific query pattern:
 
 - **`idx_tasks_board_id_created_at`** -- A composite index used when fetching tasks for a board sorted by creation date: `WHERE board_id = ?1 ORDER BY created_at DESC`. The composite index satisfies both the filter and the sort, eliminating the need for a temporary B-tree.
 
-- **`idx_tasks_board_id_done`** -- Used when filtering tasks by status within a board: `WHERE board_id = ?1 AND done = ?2`. This supports the filter tabs from Chapter 10.
+- **`idx_tasks_board_id_done`** -- Used when filtering tasks by status within a board: `WHERE board_id = ?1 AND done = ?2`. This supports the filter tabs from [Chapter 10](../02-intermediate/10-lists-filters-search.md).
 
 Notice the `IF NOT EXISTS` clause on each `CREATE INDEX`. This makes the migration idempotent -- safe to run on every application startup, just like `CREATE TABLE IF NOT EXISTS`.
 
@@ -602,7 +602,7 @@ Or simply remove the route before deploying. Either way, it is a useful developm
 
 ### Step 3 -- SQL-Based Offset Pagination
 
-In Chapter 16, the infinite scroll handler loaded all tasks and sliced them in memory. Let's replace that with proper SQL pagination.
+In [Chapter 16](../03-advanced/16-extensions-and-patterns.md), the infinite scroll handler loaded all tasks and sliced them in memory. Let's replace that with proper SQL pagination.
 
 Update `db.gleam` with a paginated query:
 
@@ -656,7 +656,7 @@ fn task_with_date_decoder() -> decode.Decoder(Task) {
 
 We request `page_size` items. If we get fewer than `page_size` results, we know there are no more pages. This avoids a separate `COUNT(*)` query.
 
-Now update the handler from Chapter 16:
+Now update the handler from [Chapter 16](../03-advanced/16-extensions-and-patterns.md):
 
 ```gleam
 // src/teamwork/router.gleam
@@ -695,7 +695,7 @@ fn handle_tasks(
 }
 ```
 
-The `task_list_page` rendering function is the same sentinel-based pattern from Chapter 16, but now the data comes from a SQL query that only fetches the rows we need:
+The `task_list_page` rendering function is the same sentinel-based pattern from [Chapter 16](../03-advanced/16-extensions-and-patterns.md), but now the data comes from a SQL query that only fetches the rows we need:
 
 ```gleam
 fn task_list_page(
@@ -742,11 +742,11 @@ fn task_list_page(
 }
 ```
 
-The view code is nearly identical to Chapter 16. The only change is underneath: instead of loading all tasks and slicing in Gleam, we load exactly the rows we need from SQLite. The user sees the same infinite scroll experience. The server does far less work.
+The view code is nearly identical to [Chapter 16](../03-advanced/16-extensions-and-patterns.md). The only change is underneath: instead of loading all tasks and slicing in Gleam, we load exactly the rows we need from SQLite. The user sees the same infinite scroll experience. The server does far less work.
 
 Compare the before and after:
 
-| Aspect            | Chapter 16 (in-memory)                  | Chapter 27 (SQL)                       |
+| Aspect            | [Chapter 16](../03-advanced/16-extensions-and-patterns.md) (in-memory)                  | [Chapter 27](27-database-performance.md) (SQL)                       |
 |-------------------|------------------------------------------|----------------------------------------|
 | **DB query**      | `SELECT * FROM tasks WHERE board_id=?1` | `SELECT ... LIMIT 20 OFFSET 40`       |
 | **Rows loaded**   | All tasks in the board                   | Only 20 rows                           |
@@ -1095,7 +1095,7 @@ If you want to expose FTS5 operators to users (for example, a "power search" mod
 
 **Part 3: Handler Update**
 
-Update the search handler from Chapter 10 to use FTS5:
+Update the search handler from [Chapter 10](../02-intermediate/10-lists-filters-search.md) to use FTS5:
 
 ```gleam
 // src/teamwork/router.gleam
@@ -1210,7 +1210,7 @@ pub fn search_tasks_fts_filtered(
 
 This is more code, but it pushes all filtering to the database. For small result sets, either approach works. For large result sets, the SQL-based approach is better because the database can limit results *before* sending them to your application.
 
-The search box from Chapter 10 requires no changes on the client side. It still sends `GET /boards/:id/tasks?q=design&status=active` with debounced keystrokes. The only change is server-side: the query goes to FTS5 instead of `LIKE`.
+The search box from [Chapter 10](../02-intermediate/10-lists-filters-search.md) requires no changes on the client side. It still sends `GET /boards/:id/tasks?q=design&status=active` with debounced keystrokes. The only change is server-side: the query goes to FTS5 instead of `LIKE`.
 
 Let's look at the difference:
 

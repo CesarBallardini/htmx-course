@@ -203,14 +203,14 @@ A good 404 page should:
 
 ## Code Walkthrough
 
-We are going to refactor the code from Chapter 2. In that chapter, our
+We are going to refactor the code from [Chapter 2](02-serving-html-pages.md). In that chapter, our
 `handle_request` function returned the same HTML page for every path. Now we
 will give our Teamwork app three distinct pages -- Home, About, and a custom 404
 -- and set up a proper middleware pipeline.
 
 ### Step 1: Separate Middleware from Routing
 
-In Chapter 2 everything lived inside `handle_request`. Let's split it into two
+In [Chapter 2](02-serving-html-pages.md) everything lived inside `handle_request`. Let's split it into two
 functions: `middleware` (cross-cutting concerns) and `handle_request` (routing).
 
 Open `src/teamwork.gleam` and update it. First, make sure you have the
@@ -322,7 +322,7 @@ matters: put specific matches first and the catch-all last.
 ### Step 3: The Layout Function
 
 Before writing our page handlers, let's revisit the `layout` function from
-Chapter 2. We need it to accept a page title and a list of child elements that
+[Chapter 2](02-serving-html-pages.md). We need it to accept a page title and a list of child elements that
 form the page's content:
 
 ```gleam

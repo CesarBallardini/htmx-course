@@ -23,7 +23,7 @@ By the end of this chapter you will be able to:
 
 ### 1.1 Why Validate on the Server?
 
-In Chapter 7 we added a form that lets users create tasks with `hx-post`. It
+In [Chapter 7](07-forms-and-user-input.md) we added a form that lets users create tasks with `hx-post`. It
 works -- but it also accepts anything. An empty title? Sure. A single character?
 Fine. A 10,000-character string? No problem. That is a problem.
 
@@ -110,7 +110,7 @@ messages, and we did not write a single line of JavaScript to make it happen.
 
 If you ever need different behaviour based on status codes -- swapping errors
 into a different element, for example -- HTMX provides the `response-targets`
-extension. We will cover that in Chapter 16. For now, the default behaviour is
+extension. We will cover that in [Chapter 16](../03-advanced/16-extensions-and-patterns.md). For now, the default behaviour is
 exactly what we need.
 
 ### 1.5 The Validation Flow
@@ -256,7 +256,7 @@ import gleam/string
 
 ### Step 2 -- Render the Form with Error Support
 
-Now we update the form-rendering function. In Chapter 7 we had a simple form
+Now we update the form-rendering function. In [Chapter 7](07-forms-and-user-input.md) we had a simple form
 that always looked the same. Now it needs to handle three states:
 
 1. **Initial render** -- empty form, no errors.

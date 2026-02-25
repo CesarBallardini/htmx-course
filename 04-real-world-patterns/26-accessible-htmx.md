@@ -657,7 +657,7 @@ screen reader might not have time to pick up the change. Three seconds gives
 every screen reader ample time to announce the text.
 
 Now update the server handlers to send the appropriate trigger events. We
-already have `taskAdded` from Chapter 16. Let us add `taskDeleted` and the
+already have `taskAdded` from [Chapter 16](../03-advanced/16-extensions-and-patterns.md). Let us add `taskDeleted` and the
 validation failure event:
 
 ```gleam
@@ -895,7 +895,7 @@ groceries, button." Clear, unambiguous, and safe.
 
 ### Step 5 -- Keyboard Navigation for Inline Editing
 
-In Chapter 21, we built inline editing for task titles. A user clicks the task
+In [Chapter 21](21-inline-editing.md), we built inline editing for task titles. A user clicks the task
 title, it turns into an input, they type, and they save. But what about keyboard
 users? They need to:
 
@@ -2047,7 +2047,7 @@ to the trigger element on close, and `role="dialog"`.
 ### Exercise 4 -- Accessible Drag-and-Drop with Keyboard Alternative
 
 **Description:** If your task board supports drag-and-drop reordering (from
-Chapter 23 or a custom implementation), add a keyboard-accessible alternative.
+[Chapter 23](23-hyperscript-practical-patterns.md) or a custom implementation), add a keyboard-accessible alternative.
 Provide "Move Up" and "Move Down" buttons that appear when a task is focused,
 allowing keyboard users to reorder tasks.
 

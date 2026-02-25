@@ -245,7 +245,7 @@ HTTP server written in Gleam that responds with HTML.
 
 You need **Gleam** and **Erlang/OTP** installed. The easiest way is with
 [mise](https://mise.jdx.dev), a polyglot tool version manager. If you do not
-have mise yet, see **Appendix C** for detailed installation instructions on
+have mise yet, see **[Appendix C](../05-appendices/A3-installing-mise.md)** for detailed installation instructions on
 Linux, macOS, and Windows.
 
 Once mise is installed, run this from the project root:
@@ -729,7 +729,7 @@ Every URL returns the same response because our `handle_request` function
 ignores the request path entirely. It does not look at `req` (beyond passing it
 to the logger). It simply returns the same HTML every time.
 
-In Chapter 2, we will introduce **Lustre** for generating HTML in a type-safe
+In [Chapter 2](02-serving-html-pages.md), we will introduce **Lustre** for generating HTML in a type-safe
 way. That is how your server will produce real web pages instead of raw strings.
 
 ### Hint for Task 4

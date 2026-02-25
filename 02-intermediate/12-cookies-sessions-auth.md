@@ -88,7 +88,7 @@ This gives us two guarantees:
 
 However, signed cookies are **not encrypted**. The data inside is readable by anyone who inspects the cookie. Do not store passwords, secret tokens, or other sensitive information in signed cookies. A user ID or username is fine.
 
-In Wisp, signed cookies use the `secret_key_base` that we have been passing to `wisp_mist.handler` since Chapter 1. Wisp uses this key to sign and verify cookie values automatically.
+In Wisp, signed cookies use the `secret_key_base` that we have been passing to `wisp_mist.handler` since [Chapter 1](../01-beginner/01-how-the-web-works.md). Wisp uses this key to sign and verify cookie values automatically.
 
 ### HTMX and Cookies
 

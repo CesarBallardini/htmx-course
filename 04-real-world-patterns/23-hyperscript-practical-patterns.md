@@ -25,7 +25,7 @@ By the end of this chapter you will be able to:
 
 ### 1.1 From Reference to Recipes
 
-Appendix B is the grammar book. It covers every command, every variable scope, every
+[Appendix B](../05-appendices/A2-hyperscript.md) is the grammar book. It covers every command, every variable scope, every
 targeting expression. This chapter is the cookbook.
 
 The difference matters. Knowing that \_hyperscript has a `put` command and a `set`
@@ -194,7 +194,7 @@ than jarring. This is a CSS concern, not a \_hyperscript concern -- keep
 presentation in stylesheets and behaviour in \_hyperscript.
 
 **Edge case: pre-filled textareas.** If the textarea has a default value (e.g.
-during inline editing from Chapter 21), the counter will show "0" until the user
+during inline editing from [Chapter 21](21-inline-editing.md)), the counter will show "0" until the user
 types. To fix this, add an `init` handler:
 
 ```
@@ -1592,7 +1592,7 @@ Now let us combine everything. A fully-featured task card has:
 1. **Drag-and-drop** for reordering.
 2. **Copy-link** for sharing.
 3. **Hover highlight** for visual feedback.
-4. **Inline edit trigger** (from Chapter 21).
+4. **Inline edit trigger** (from [Chapter 21](21-inline-editing.md)).
 5. **Delete** via HTMX.
 
 Five distinct behaviours on a single element. The \_hyperscript handles the first
