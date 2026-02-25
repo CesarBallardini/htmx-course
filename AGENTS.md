@@ -24,12 +24,14 @@ This file provides guidance to AI coding agents working with this repository.
 05-appendices/            A1 (bibliography & resources), A2 (_hyperscript reference), A3 (installing mise)
 ```
 
-Chapters are sequential and cross-reference each other. Each chapter follows this structure: learning objectives → theory → code walkthrough → full code listing → exercises → solution hints → key takeaways → what's next.
+Chapters are sequential and cross-reference each other with relative markdown links (e.g., `[Chapter 9](../02-intermediate/09-swap-strategies-and-targets.md)`). Same-folder links use just the filename; cross-folder links use `../target-folder/filename.md`. Every "Chapter X" and "Appendix X" mention in prose is a clickable link (except title headings and code comments).
+
+Each chapter follows this structure: learning objectives → theory → code walkthrough → full code listing → exercises → solution hints → key takeaways → what's next.
 
 ## Writing Conventions
 
 - All code examples use Gleam with these libraries at these version ranges:
-  - `wisp >= 2.0.0 < 3.0.0`, `mist >= 5.0.0 < 6.0.0`, `lustre >= 4.0.0 < 6.0.0`, `hx >= 3.0.0 < 4.0.0`
+  - `wisp >= 2.0.0 < 3.0.0`, `mist >= 5.0.0 < 6.0.0`, `lustre >= 5.0.0 < 6.0.0`, `hx >= 3.0.0 < 4.0.0`
   - `gleam_stdlib >= 0.50.0`, `gleam_http >= 4.0.0`, `gleam_erlang >= 1.0.0`, `gleam_otp >= 1.0.0`
 - The `hx` library provides typed HTMX attributes: `hx.get()`, `hx.target(hx.Selector("#id"))`, `hx.swap(hx.InnerHTML)`, `hx.trigger([...])`, `hx.push_url(True)`, etc.
 - Lustre HTML uses `html.div(attrs, children)` pattern; render with `element.to_document_string()` (full page) or `element.to_string()` (fragment).

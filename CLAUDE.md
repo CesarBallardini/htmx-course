@@ -24,7 +24,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 05-appendices/            A1 (bibliography & resources), A2 (_hyperscript reference), A3 (installing mise)
 ```
 
-Chapters are sequential and cross-reference each other. Each chapter follows this structure: learning objectives → theory → code walkthrough → full code listing → exercises → solution hints → key takeaways → what's next.
+Chapters are sequential and cross-reference each other with relative markdown links (e.g., `[Chapter 9](../02-intermediate/09-swap-strategies-and-targets.md)`). Same-folder links use just the filename; cross-folder links use `../target-folder/filename.md`. Every "Chapter X" and "Appendix X" mention in prose is a clickable link (except title headings and code comments).
+
+Each chapter follows this structure: learning objectives → theory → code walkthrough → full code listing → exercises → solution hints → key takeaways → what's next.
 
 ## Writing Conventions
 

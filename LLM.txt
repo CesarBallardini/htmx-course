@@ -24,6 +24,10 @@ This repository contains educational content (markdown files with embedded code)
 - 04-real-world-patterns/ (Chapters 19–28): Error handling, HTMX response headers, inline editing, modal dialogs, _hyperscript patterns, dynamic forms, file uploads, accessibility, database performance, background jobs with BEAM processes
 - 05-appendices/: bibliography and resources (A1), _hyperscript language reference (A2), installing mise (A3)
 
+## Cross-References
+
+All "Chapter X" and "Appendix X" mentions in prose are relative markdown links for browser navigation. Same-folder links use just the filename; cross-folder links use `../target-folder/filename.md`. Only title headings (`# Chapter X --`) and code comments are unlinked.
+
 ## Chapter Format
 
 Each chapter follows: learning objectives → theory → code walkthrough → full code listing → exercises → solution hints → key takeaways → what's next.
